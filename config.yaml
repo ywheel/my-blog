@@ -22,7 +22,6 @@ params:
   GitHubUser: "ywheel"
   SidebarRecentLimit: 5
   DateForm : "2006年01月02日"
-  Tagline: "勿忘初心"
   Description: "勿忘初心，技术无止，做一名文艺的程序员"
   Keywords: "程序员,思考,读书笔记,技术分享,心路历程"
   Categories:
