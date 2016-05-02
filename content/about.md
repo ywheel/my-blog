@@ -8,10 +8,9 @@ Hi all, 我叫ywheel, 是一名程序员。
 
 ### 我的经历
 
-- 2006-2010 北京邮电大学信息工程系
-- 2010-2013 北京邮电大学宽带网络监控教研中心
+- 2006-2013 北京邮电大学本硕
 - 2013-2015 亚马逊（中国）SDE, Amazon Clicks中国团队最早成员
-- 2015.5.7-Now HaohanData平台研发主管
+- 2015.5.7-Now 某大数据公司平台研发主管
 
 ### 我的技能
 
@@ -31,6 +30,5 @@ Hi all, 我叫ywheel, 是一名程序员。
 
 - Github: [github.com/ywheel](https://github.com/ywheel)
 - 新浪微博: [weibo.com/ywheel](http://weibo.com/ywheel)
-- LinkedIn: [linkedin.com/in/yuanlun](https://www.linkedin.com/in/yuanlun)
 - Email: ywheel@qq.com
 - 微信公众号：轮子们
