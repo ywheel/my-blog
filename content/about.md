@@ -29,6 +29,7 @@ Hi all, 我叫ywheel, 是一名程序员。
 ### 一些链接
 
 - Github: [github.com/ywheel](https://github.com/ywheel)
+- 个人博客: [http://blog.ywheel.cn](http://blog.ywheel.cn)
 - 新浪微博: [weibo.com/ywheel](http://weibo.com/ywheel)
 - Email: ywheel@qq.com
 - 微信公众号：轮子们
