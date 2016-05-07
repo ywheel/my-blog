@@ -1,6 +1,6 @@
 title: "轮子们"
 languageCode: "zh-CN"
-baseurl: "http://ywheel.github.io"
+baseurl: "http://blog.ywheel.cn"
 theme: "hugo-rapid-theme"
 copyright: "Copyright (c) 2016. All rights reserved."
 MetaDataFormat: "yaml"
