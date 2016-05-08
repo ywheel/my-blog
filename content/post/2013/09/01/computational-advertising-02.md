@@ -1,6 +1,7 @@
 ---
 categories:
 - 读书笔记
+- 技术文章
 date: 2013-09-01T22:32:39+08:00
 description: "计算广告学笔记"
 keywords:

@@ -3,9 +3,7 @@ date: 2016-04-28T23:52:12+08:00
 title: 关于我
 url: "/about/"
 categories:
- - 读书笔记
- - 技术文章
- - 思考感悟
+- 思考感悟
 ---
 
 Hi all, 我叫ywheel, 是一名程序员。
