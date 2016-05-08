@@ -4,8 +4,8 @@ categories:
 date: 2013-08-23T00:51:07+08:00
 description: "计算广告学笔记"
 keywords:
-- xxx
-title: 计算广告核心问题和挑战
+- 计算广告学
+title: 计算广告学笔记1-计算广告核心问题和挑战
 url: ""
 ---
 
