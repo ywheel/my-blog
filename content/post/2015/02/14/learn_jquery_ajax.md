@@ -1,13 +1,14 @@
 ---
 categories:
 - 技术文章
-date: 2015-02-14T19:01:47+08:00
+date: 2015-02-14T19:40:39+08:00
 description: "从零开始学习jQuery (六) jQuery中的Ajax"
 keywords:
 - jQuery
 title: 从零开始学习jQuery (六) jQuery中的Ajax
 url: ""
 ---
+
 
 ```
 节选转载自http://www.cnblogs.com/engine1984/archive/2012/02/28/2371782.html
@@ -398,12 +399,11 @@ serialize()函数将要发送给服务器的form中的表单对象拼接成一�
 
 提示:代码见 chapter6\7-serialize.htm
 
-3.serializeArray( )
-Returns: Array<Object>
+3.`serializeArray( )` Returns:` Array<Object>`
 
 说明:
 
-序列化表格元素 (类似 '.serialize()' 方法) 返回 JSON 数据结构数据。
+序列化表格元素 (类似 `.serialize()`方法) 返回 JSON 数据结构数据。
 
 注意，此方法返回的是JSON对象而非JSON字符串。需要使用插件或者第三方库进行字符串化操作。
 
@@ -411,9 +411,7 @@ Returns: Array<Object>
 
 看说明文档让我有所失望, 使用此函数获取到的是JSON对象, 但是jQuery中没有提供将JSON对象转化为JSON字符串的方法.
 
-在JSON官网上没有找到合适的JSON编译器, 最后选用了jquery.json这个jQuery插件:
-
-http://code.google.com/p/jquery-json/
+在JSON官网上没有找到合适的JSON编译器, 最后选用了jquery.json这个jQuery插件: http://code.google.com/p/jquery-json/
 
 使用起来异常简单:
 
@@ -424,16 +422,17 @@ var name = $.evalJSON(encoded).plugin;      //"jquery-json"
 var version = $.evalJSON(encoded).version;  // 1.3
 ```
 
-使用serializeArray( ) 再配合 $.toJSON 方法, 我们可以很方便的获取表单对象的JSON, 并且转换为JSON字符串:
+使用`serializeArray( )`再配合 `$.toJSON` 方法, 我们可以很方便的获取表单对象的JSON, 并且转换为JSON字符串:
 
-```$("#results").html( $.toJSON( $("form").serializeArray() ));```
+```javascript
+$("#results").html( $.toJSON( $("form").serializeArray() ));
+```
 
 结果为:
 
 ```json
 [{"name": "single", "value": "Single"}, {"name": "param", "value": "Multiple"}, {"name": "param", "value": "Multiple3"}, {"name": "check", "value": "check2"}, {"name": "radio", "value": "radio1"}]
 ```
-
 
 ### 全局Ajax事件
 在jQuery.ajaxSetup( options ) 中的options参数属性中, 有一个global属性:
@@ -450,12 +449,12 @@ global
 
 |名称|说明|
 |----|----|
-|ajaxComplete( callback )|	AJAX 请求完成时执行函数
-|ajaxError( callback )	|AJAX 请求发生错误时执行函数
-|ajaxSend( callback )	|AJAX 请求发送前执行函数
-|ajaxStart( callback )	|AJAX 请求开始时执行函数
-|ajaxStop( callback )	|AJAX 请求结束时执行函数
-|ajaxSuccess( callback )|	AJAX 请求成功时执行函数
+|ajaxComplete( callback )|	AJAX 请求完成时执行函数|
+|ajaxError( callback )	|AJAX 请求发生错误时执行函数|
+|ajaxSend( callback )	|AJAX 请求发送前执行函数|
+|ajaxStart( callback )	|AJAX 请求开始时执行函数|
+|ajaxStop( callback )	|AJAX 请求结束时执行函数|
+|ajaxSuccess( callback )|	AJAX 请求成功时执行函数|
  
 
 用一个示例讲解各个事件的触发顺序:
@@ -501,3 +500,4 @@ global
 ![图2](http://o75oehjrs.bkt.clouddn.com/image/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0jQuery%20%28%E5%85%AD%29%20jQuery%E4%B8%AD%E7%9A%84Ajax2.png)
 
 我们可以通过将默认options的global属性设置为false来取消全局Ajax事件的触发.
+
