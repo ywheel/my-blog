@@ -9,6 +9,10 @@ title: 老家
 url: ""
 ---
 
+![老家门前的三棵枣树](http://o75oehjrs.bkt.clouddn.com/image/blog/%E8%80%81%E5%AE%B6.jpg?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0Y1RUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+
+图：老家门前的三棵枣树
+
 5年前的今天，老家拆除了，在老家的原址上，早已盖起一栋新楼。这边文章就是在老家拆除后的几天写的，用来纪念我们心中的"老家"。
 
 ---
