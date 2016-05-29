@@ -92,6 +92,7 @@ HUE也提供了很好的Oozie的集成，能够在HUE上创建和编辑Bundles, 
 于是我在github上给HUE发了一个[Issue](https://github.com/cloudera/hue/issues/371)和一个[Pull Request](https://github.com/cloudera/hue/pull/372)。几天后Pull Request被接收，merge到了master分支上，可以看到这个[Commit](https://github.com/cloudera/hue/commit/61e80b3cd2820c68f2103e8cef34d50734f02c09)。
 
 在这里记录一下更新的步骤：
+
 1. Fork HUE的工程，比如 [ywheel/hue](https://github.com/ywheel/hue)
 2. 创建一个新的分支，不要使用master分支提交修改。比如我创建了[fix-postgresql-spelling](https://github.com/ywheel/hue/tree/fix-postgresql-spelling)分支。
 3. 将代码pull下来，修改后commit，提交到[fix-postgresql-spelling](https://github.com/ywheel/hue/tree/fix-postgresql-spelling)分支。
