@@ -31,7 +31,7 @@ Hue是一个开源的Apache Hadoop UI系统，由Cloudera Desktop演化而来，
 
 HUE提供的这些功能相比Hadoop生态各组件提供的界面更加友好，但是一些需要debug的场景可能还是需要使用原生系统才能更加深入的找到错误的原因。
 
-HUE中查看Oozie workflow时，也可以很方面的看到整个workflow的DAG图，不过在最新版本中已经将DAG图去掉了，只能看到workflow中的action列表和他们之间的跳转关系，想要看DAG图的仍然可以使用oozie原生的界面系统查看。
+HUE中查看Oozie workflow时，也可以很方便的看到整个workflow的DAG图，不过在最新版本中已经将DAG图去掉了，只能看到workflow中的action列表和他们之间的跳转关系，想要看DAG图的仍然可以使用oozie原生的界面系统查看。
 
 ### HUE登录
 如果自己搭建了HUE，则可以使用管理员账户创建一个新的用户，然后使用新的用户进行登录，见下图：
@@ -43,7 +43,7 @@ HUE中查看Oozie workflow时，也可以很方面的看到整个workflow的DAG�
 ![HUE Demo图](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%20Demo.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
 
 ### HDFS文件浏览
-HUE可以很方面的浏览HDFS中的目录和文件，并且进行文件和目录的创建、复制、删除、下载以及修改权限等操作。
+HUE可以很方便的浏览HDFS中的目录和文件，并且进行文件和目录的创建、复制、删除、下载以及修改权限等操作。
 
 HDFS实现了一个和POSIX系统类似的文件和目录的权限模型。每个文件和目录有一个所有者（owner）和一个组（group）。文件或目录对其所有者、同组的其他用户以及所有其他用户分别有着不同的权限。**但，用户身份机制对HDFS本身来说只是外部特性。HDFS并不提供创建用户身份、创建组或处理用户凭证等功能。** 使用HUE访问HDFS时，HDFS简单的将HUE上的用户名和组的名称进行权限的校验。
 
