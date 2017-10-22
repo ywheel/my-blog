@@ -10,11 +10,12 @@
               <a rel="nofollow" href="http://golang.org" target="_blank">#golang</a>.
               Theme By  
               <a rel="nofollow" href="https://github.com/coderzh/hugo-rapid-theme" target="_blank">hugo-rapid-theme</a>.
-              {{ if isset .Site.BaseURL "http://blog.ywheel.cn/" }}
+              {{ if eq (printf "%v" $.Site.BaseURL) "http://blog.ywheel.cn/" }}
                   Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>.
-              {{else}}
+              {{ else }}
                   Hosted By <a rel="nofollow" href="https://pages.github.com/" target="_blank">Github Pages</a>.
               {{ end }}
+
             </p>
           </div>
           <!--/#copyright-->
