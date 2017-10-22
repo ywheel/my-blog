@@ -18,7 +18,7 @@ Taxonomies:
   tag: "tags"
   category: "categories"
 params:
-  CopyrightHTML: "Copyright &#xA9; 2016. All Rights Reserved."
+  CopyrightHTML: "Copyright &#xA9; 2017. All Rights Reserved."
   GitHubUser: "ywheel"
   SidebarRecentLimit: 5
   DateForm : "2006年01月02日"
