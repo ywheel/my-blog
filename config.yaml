@@ -2,7 +2,7 @@ title: "轮子们"
 languageCode: "zh-CN"
 baseurl: "http://blog.ywheel.com"
 theme: "hugo-rapid-theme"
-copyright: "Copyright (c) 2017. All rights reserved."
+copyright: "Copyright (c) 2018. All rights reserved."
 MetaDataFormat: "yaml"
 canonifyurls: true
 builddrafts: false
@@ -18,7 +18,7 @@ Taxonomies:
   tag: "tags"
   category: "categories"
 params:
-  CopyrightHTML: "Copyright &#xA9; 2017. All Rights Reserved."
+  CopyrightHTML: "Copyright &#xA9; 2018. All Rights Reserved."
   GitHubUser: "ywheel"
   SidebarRecentLimit: 5
   DateForm : "2006年01月02日"
