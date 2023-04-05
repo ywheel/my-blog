@@ -10,16 +10,14 @@ Hi all, 我叫ywheel, 是一名程序员。
 
 ### 我的经历
 
-- 2006-2013 北京邮电大学本硕
-- 2013-2015 亚马逊（中国）SDE, Amazon Clicks中国团队最早成员
-- 2015.5.7-Now 某大数据公司平台研发主管
+- 2006-2013 本硕毕业
+- 2013-2015 外企A记广告团队研发
+- 2015-2018 某大数据公司平台研发主管
+- 2018-Now  BAT大厂打工人
 
 ### 我的技能
 
-- 主攻Java, 也能搞一些脚本语言如Python, perl, awk。正在学习scala...
-- 目标全栈工程师，遗憾的是目前只能算略懂前端
-- 大数据技术栈, Hadoop, CDH, Oozie, Kafka, Storm, Spark
-- 逐步承担和和挑战架构设计
+- 哪里需要哪里搬
 
 ### 我的生活
 
@@ -34,4 +32,4 @@ Hi all, 我叫ywheel, 是一名程序员。
 - 个人博客: [http://blog.ywheel.cn](http://blog.ywheel.cn)
 - 新浪微博: [weibo.com/ywheel](http://weibo.com/ywheel)
 - Email: <ywheel@qq.com>
-- 微信公众号：轮子们
+- 微信公众号：轮子同学
