@@ -2,7 +2,7 @@ title: "轮子同学"
 languageCode: "zh-CN"
 baseurl: "http://blog.ywheel.com"
 theme: "hugo-rapid-theme"
-copyright: "Copyright (c) 2018. All rights reserved."
+copyright: "Copyright (c) 2023. All rights reserved."
 MetaDataFormat: "yaml"
 canonifyurls: true
 builddrafts: false
