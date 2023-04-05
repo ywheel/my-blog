@@ -36,11 +36,11 @@ HUE中查看Oozie workflow时，也可以很方便的看到整个workflow的DAG�
 ### HUE登录
 如果自己搭建了HUE，则可以使用管理员账户创建一个新的用户，然后使用新的用户进行登录，见下图：
 
-![HUE登录图](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%E7%99%BB%E5%BD%95.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![HUE登录图](/public/img/hue/login.png)
 
 使用[HUE官网](http://gethue.com/)上的live demo可以尝鲜。如果大家自己没有搭建大数据平台，没有安装HUE的话，可以先在该demo上尝试。点击[Play with the live Demo now!](http://demo.gethue.com/),将会进入HUE的"我的文档"：
 
-![HUE Demo图](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%20Demo.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![HUE Demo图](/public/img/hue/live_demo.jpeg)
 
 ### HDFS文件浏览
 HUE可以很方便的浏览HDFS中的目录和文件，并且进行文件和目录的创建、复制、删除、下载以及修改权限等操作。
@@ -49,7 +49,7 @@ HDFS实现了一个和POSIX系统类似的文件和目录的权限模型。每�
 
 在Live Demo中,点击"文件浏览器", 进入HDFS的家目录：
 
-![HUE HDFS图](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%20File%20Browser.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![HUE HDFS图](/public/img/hue/hdfs.jpeg)
 
 **PS:** Live Demo中禁了文件上传功能。
 
@@ -57,27 +57,27 @@ HDFS实现了一个和POSIX系统类似的文件和目录的权限模型。每�
 
 点击Job Browser，可以查看作业列表，并且可以通过点击右上角的"成功","正在运行","失败","停止"来筛选不同状态的作业：
 
-![HUE Job Browser](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%20Job%20Browser.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![HUE Job Browser](/public/img/hue/job.jpeg)
 
 我们在实际工作中发现，当集群(CDH5.2) 配置了HA后，当active的ResourceManager自动切换后(比如NN1上的ResourceManager是active，而NN2是standby，当NN1出现故障， NN2上的ResourceManager转变为active状态)，HUE的job browser将不能够正确显示。只有当修复故障后，将NN1上的ResourceManager重新变成active状态，HUE的job browser才能正常工作。不知道这个问题在后续版本是否已经得到修复。
 
 ### Hive查询
 HUE的beeswax app提供友好方便的Hive查询功能，能够选择不同的Hive数据库，编写HQL语句，提交查询任务，并且能够在界面下方看到查询作业运行的日志。在得到结果后，还提供进行简单的图表分析能力。
 
-![HUE Hive查询](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%20Hive.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![HUE Hive查询](/public/img/hue/hive_sql.jpeg)
 
 点击"Data Browsers"->"Metastore表"，还可以看到Hive中的数据库，数据库中的表以及各个表的元数据等信息。
 
-![HUE Hive MetaStore](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%20Hive%20MetaStore.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![HUE Hive MetaStore](/public/img/hue/metastore.jpeg)
 
 ### Oozie Workflow编辑
 HUE也提供了很好的Oozie的集成，能够在HUE上创建和编辑Bundles, Coordinator, Workflow. Oozie的介绍可以去[官网](https://oozie.apache.org/)查看。下图为在HUE上创建一个新的workflow，在该界面上，可以直接拖动不同的组件，变成DAG中的节点，并且设置各个action的流转逻辑。
 
-![HUE WF Editor](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%20Workflow%20Editor.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![HUE WF Editor](/public/img/hue/oozie.jpeg)
 
 当然Oozie也可以通过命令行的方式提交B,C,W. 不过是使用HUE创建的workflow，或者是通过命令行提交的workflow，都可以在HUE上查看运行的状况：
 
-![HUE WF Browser](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%20Workflow%20Browser.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![HUE WF Browser](/public/img/hue/workflow.jpeg)
 
 只是通过命令行提交的workflow就不可以在HUE上进行编辑了。使用配置文件、命令行提交的方式能够保证在生产环境上运行的和在测试环境上运行的版本一致，而使用HUE界面编辑的方式虽然方便，但也可能会带来人工操作在生产环境中失误的风险，有利也有弊吧。
 
@@ -85,7 +85,7 @@ HUE也提供了很好的Oozie的集成，能够在HUE上创建和编辑Bundles, 
 ## Contribution
 我在给同事准备培训材料的时候，到HUE的github上去查找资料。在看到HUE的主要功能时，github上的原文是这样的：
 
-![HUE Features old](http://o75oehjrs.bkt.clouddn.com/image/blog/HUE%20Features%20old.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![HUE Features old](/public/img/hue/typo.png)
 
 恰好我司主要使用的数据库是PostgreSQL，看到PostGresl感觉怪怪的，于是Google了一把，PostgreSQL有两个名字：PostgreSQL和Postgres，目前[官方网站](https://www.postgresql.org/)上的名字仍然是PostgreSQL. 不管PostGresl是否有什么典故，但是PostgreSQL一定是对的。因此，我去查了下如何给HUE提交代码修改。在Github上能找到wiki: [Contribute to HUE](https://github.com/cloudera/hue/wiki/Contribute-to-HUE), HUE有自己的JIRA和Review Board, 但也说了`The Hue project gladly welcomes any patches or pull requests!`
 
