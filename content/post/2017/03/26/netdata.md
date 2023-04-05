@@ -16,7 +16,7 @@ url: "/post/2017/03/26/netdata"
 
 官网地址在这里： https://my-netdata.io/ ， 在[The state of the Octoverse 2016](https://octoverse.github.com/) 也能看到他的身影：
 
-![github octoverse 2016](http://o75oehjrs.bkt.clouddn.com/image/blog/GitHub%20octoverse%202016.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0Y1RUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![github octoverse 2016](/public/img/netdata/intro.jpeg)
 
 ## Netdata feature
 
@@ -139,7 +139,7 @@ ln -s /home/ubuntu/netdata/netdata-updater.sh /etc/cron.daily/netdata-updater.sh
 
 #### Alarms
 
-![Alarms](http://o75oehjrs.bkt.clouddn.com/image/blog/netdata%20alarm.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0Y1RUZFRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![Alarms](/public/img/netdata/alarm.jpeg)
 
 ## Netdata backend
 

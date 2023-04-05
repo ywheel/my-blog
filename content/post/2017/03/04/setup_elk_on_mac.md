@@ -20,7 +20,7 @@ url: "/post/2017/03/04/setup_elk_on_mac/"
 
 架构图下图：
 
-![ELK架构图](http://o75oehjrs.bkt.clouddn.com/image/blog/ELK%E6%9E%B6%E6%9E%84.jpg?imageMogr2/auto-orient/thumbnail/800x/blur/1x0/quality/75|watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/560/fill/I0ZBRkFGQQ==/dissolve/100/gravity/SouthWest/dx/10/dy/10|imageslim)
+![ELK架构图](/public/img/elk_on_mac/sa.jpeg)
 
 图中的Shipper和Indexer都可以是Logstash, Broker一般为Redis，也可以是kafka等。而Search & Storage则主要是Elasticsearch了，一方面接收上游index好的文档，另一方面提供API支持对内容的检索。而kibana则是一个web interface, 可以提供简单易用的界面让用户方便的写出搜索的表达式来访问Elasticsearch.
 
@@ -133,15 +133,15 @@ curl -XPUT localhost:9200/_bulk --data-binary @shakespeare.json
 
 数据写入后，到kibana目录运行`./kibana`，启动后访问：`http://localhost:5601/` , 看到kibana界面后会提示"Configure an index pattern"。， 如下图：
 
-![kibana 1](http://o75oehjrs.bkt.clouddn.com/image/blog/kibana%E5%88%9B%E5%BB%BAindex%201.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![kibana 1](/public/img/elk_on_mac/index.jpeg)
 
 刚才在写入数据的时候已经创建了shakespeare index, 且不是按照时间分布的日志文件（shakespeare只有一个json文件），因此，取消勾选`Index contains time-based envents`，输入`shakespeare`后，就能看到`create`按钮了。
 
-![kibana 2](http://o75oehjrs.bkt.clouddn.com/image/blog/kibana%E5%88%9B%E5%BB%BAindex%202.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![kibana 2](/public/img/elk_on_mac/index2.jpeg)
 
 点击kibana的Discover页面，输入`WESTMORELAND`查询，可以看到有110个结果：
 
-![kibana 3](http://o75oehjrs.bkt.clouddn.com/image/blog/kibana%20discover.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![kibana 3](/public/img/elk_on_mac/search.jpeg)
 
 ## 监控和安全
 
@@ -162,17 +162,17 @@ kibana-plugin install x-pack
 
 安装完成后，启动elasticsearch和kibana，访问kibana时发现需要登录了， 默认用户名和密码是elastic/changeme。
 
-![kibana login](http://o75oehjrs.bkt.clouddn.com/image/blog/kibana%20login.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![kibana login](/public/img/elk_on_mac/login.png)
 
 后续可以在Management面板中进行用户和角色的配置，也可以看到新增了Reporting。
 
-![kibana management](http://o75oehjrs.bkt.clouddn.com/image/blog/kibana%20management.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![kibana management](/public/img/elk_on_mac/report.jpeg)
 
 在Monitoring页面中可以看到Elasticsearch和Kibana的状态，点击Indices还可以看到具体索引的状态。
 
-![kibana monitoring 1](http://o75oehjrs.bkt.clouddn.com/image/blog/kibana%20monitoring%201.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![kibana monitoring 1](/public/img/elk_on_mac/xpack.jpeg)
 
-![kibana monitoring 1](http://o75oehjrs.bkt.clouddn.com/image/blog/kibana%20monitoring%202.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![kibana monitoring 1](/public/img/elk_on_mac/xpack2.jpeg)
 
 告警功能和报表功能后续再进行详细研究。之前在A家的时候，记得有个基于日志的告警功能：当service的日志中出现了ERROR或FATAL，可以自动触发告警。有了X-Pack后，这个功能应该也是可以通过ELK来实现的啦。
 
@@ -241,6 +241,6 @@ output{
 
 运行`logstash -f my_blog_conf`后，再运行`cat /Users/ywheel/my_blog/content/about.md > /Users/ywheel/test.md`, 然后发现数据写入了Elasticsearch， index也多了一个`my_blog`。到Kibana中添加`my_blog`这个index pattern后，就可以在Discover进行搜索了。比如我搜索“程序员”：
 
-![kibana search](http://o75oehjrs.bkt.clouddn.com/image/blog/kibana%20search.png?watermark/2/text/YmxvZy55d2hlZWwuY24=/font/5a6L5L2T/fontsize/500/fill/Izk3QjhGMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10)
+![kibana search](/public/img/elk_on_mac/search2.jpeg)
 
 看来中文分词得改进一下，不过现在也已经很酷了! 以后可以对整个博客进行全文检索了~~
